@@ -55,3 +55,29 @@ flatpak install flathub  org.gimp.GIMP -y
 #OBS
 echo "Installing OBS"
 flatpak install flathub  com.obsproject.Studio -y
+
+
+sudo apt install dialog
+cmd=(dialog --separate-output --checklist "Please Select Optional Software you want to install:" 114 137 218)
+options=(
+   1 "Spotify" off
+	 2 "Steam" off  
+	 )
+	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
+		clear
+		for choice in $choices
+		do
+		    case $choice in
+		1)
+	      #Install Spotify
+				echo "Installing Spotiy"
+				flatpak install flathub com.spotify.Client -y
+				;;
+	        	
+	   2)
+	      #Install Steam
+				echo "Installing Steam"
+				flatpak install flathub com.valvesoftware.Steam -y
+				;;
+	esac
+done
