@@ -62,8 +62,8 @@ cmd=(dialog --separate-output --checklist "Please Select Optional Software you w
 options=(
 	 1 "Spotify" off
 	 2 "Steam" off  
-   	 4 "Pyrcharm (community)" off
-	 5 "Pyrcharm (professional)" off
+   	 4 "PyCharm (community)" off
+	 5 "PyCharm (professional)" off
 	 6 "PhpStorm" off
 	 7 "WebStorm" off
 	 8 "GitKraken" off
@@ -94,13 +94,13 @@ options=(
 				flatpak install flathub com.jetbrains.CLion -y
 				;;
     			4)	
-				#Install Pyrcharm (community)
-				echo "Installing Pyrcharm (community)"
+				#Install PyCharm (community)
+				echo "Installing PyCharm (community)"
 				flatpak install flathub com.jetbrains.PyCharm-Community -y
 				;;
     			5)	
-				#Install Pyrcharm (professional)
-				echo "Installing Pyrcharm (professional)"
+				#Install PyCharm (professional)
+				echo "Installing PyCharm (professional)"
 				flatpak install flathub com.jetbrains.PyCharm-Professional -y
 				;;
     			6)	
