@@ -66,6 +66,9 @@ options=(
 	 5 "Pyrcharm (professional)" off
 	 6 "PhpStorm" off
 	 7 "WebStorm" off
+	 8 "GitKraken" off
+	 9 "Gitg" off
+	 10 "Postman" off
 	 )
 	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -108,5 +111,21 @@ options=(
 				echo "Installing WebStorm"
 				flatpak install flathub com.jetbrains.WebStorm -y
 				;;
+			8)	
+				#Install GitKraken
+				echo "Installing GitKraken"
+				flatpak install flathub com.axosoft.GitKraken -y
+				;;	
+ 			9)
+				#Install Gitg
+				echo "Installing Gitg"
+				flatpak install flathub org.gnome.gitg -y
+				;;
+		 	10)
+				#Install Postman
+				echo "Installing Gitg"
+				flatpak install flathub com.getpostman.Postman -y
+				;;
+				
 	esac
 done
