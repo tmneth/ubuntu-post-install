@@ -69,6 +69,8 @@ options=(
 	 8 "GitKraken" off
 	 9 "Gitg" off
 	 10 "Postman" off
+	 11 "KeePassXC" off
+	 12 "Bitwarden" off
 	 )
 	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -125,6 +127,16 @@ options=(
 				#Install Postman
 				echo "Installing Gitg"
 				flatpak install flathub com.getpostman.Postman -y
+				;;
+			11)
+				#Install KeePassXC
+				echo "Installing KeePassXC"
+				flatpak install flathub org.keepassxc.KeePassXC -y
+				;;
+			12)
+				#Install Bitwarden
+				echo "Installing Bitwarden"
+				flatpak install flathub com.bitwarden.desktop -y
 				;;
 				
 	esac
