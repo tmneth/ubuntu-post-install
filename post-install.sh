@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Update and Upgrade
+# Update and Upgrade
 echo "Updating and Upgrading"
 sudo apt update && sudo apt upgrade -y
 
@@ -84,7 +84,7 @@ options=(
 				;;
 	        	
 	   		2)
-	     			 #Install Steam
+	     			#Install Steam
 				echo "Installing Steam"
 				flatpak install flathub com.valvesoftware.Steam -y
 				;;
