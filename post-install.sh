@@ -60,24 +60,53 @@ flatpak install flathub  com.obsproject.Studio -y
 sudo apt install dialog
 cmd=(dialog --separate-output --checklist "Please Select Optional Software you want to install:" 114 137 218)
 options=(
-   1 "Spotify" off
+	 1 "Spotify" off
 	 2 "Steam" off  
+   	 4 "Pyrcharm (community)" off
+	 5 "Pyrcharm (professional)" off
+	 6 "PhpStorm" off
+	 7 "WebStorm" off
 	 )
 	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
 		for choice in $choices
 		do
 		    case $choice in
-		1)
-	      #Install Spotify
+			1)
+	     			#Install Spotify
 				echo "Installing Spotiy"
 				flatpak install flathub com.spotify.Client -y
 				;;
 	        	
-	   2)
-	      #Install Steam
+	   		2)
+	     			 #Install Steam
 				echo "Installing Steam"
 				flatpak install flathub com.valvesoftware.Steam -y
+				;;
+			3)
+			    	#Install CLion
+			    	echo "Installing CLion"
+				flatpak install flathub com.jetbrains.CLion -y
+				;;
+    			4)	
+				#Install Pyrcharm (community)
+				echo "Installing Pyrcharm (community)"
+				flatpak install flathub com.jetbrains.PyCharm-Community -y
+				;;
+    			5)	
+				#Install Pyrcharm (professional)
+				echo "Installing Pyrcharm (professional)"
+				flatpak install flathub com.jetbrains.PyCharm-Professional -y
+				;;
+    			6)	
+				#Install PhpStorm
+				echo "Installing PhpStorm"
+				flatpak install flathub com.jetbrains.PhpStorm -y
+				;;
+ 		    	7)	
+				#Install WebStorm
+				echo "Installing WebStorm"
+				flatpak install flathub com.jetbrains.WebStorm -y
 				;;
 	esac
 done
