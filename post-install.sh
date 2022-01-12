@@ -56,7 +56,6 @@ flatpak install flathub  org.gimp.GIMP -y
 echo "Installing OBS"
 flatpak install flathub  com.obsproject.Studio -y
 
-
 sudo apt install dialog
 cmd=(dialog --separate-output --checklist "Please Select Optional Software you want to install:" 114 137 218)
 options=(
@@ -71,6 +70,9 @@ options=(
 	 10 "Postman" off
 	 11 "KeePassXC" off
 	 12 "Bitwarden" off
+	 13 "Signal" off
+	 14 "Microsoft Teams" off
+	 15 "Skype" off
 	 )
 	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -137,6 +139,21 @@ options=(
 				#Install Bitwarden
 				echo "Installing Bitwarden"
 				flatpak install flathub com.bitwarden.desktop -y
+				;;
+			13)
+				#Install Signal
+				echo "Installing Signal"
+				flatpak install flathub org.signal.Signal -y
+				;;
+			14)
+				#Install Microsoft Teams
+				echo "Installing Microsoft Teams"
+				flatpak install flathub com.microsoft.Teams -y
+				;;
+			15)
+				#Install Skype
+				echo "Installing Skype"
+				flatpak install flathub com.skype.Client -y
 				;;
 				
 	esac
