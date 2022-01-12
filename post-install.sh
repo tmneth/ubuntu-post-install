@@ -145,3 +145,18 @@ done
 # Setting up desktop wallpaper
 URI="Downloads/Ubuntu-post-install-main/wallpaper.jpeg"
 gsettings set org.gnome.desktop.background picture-uri "${URI}"
+
+
+# Setting up favourite-apps
+gsettings set org.gnome.shell favorite-apps "[
+'firefox_firefox.desktop', 
+'org.gnome.Terminal.desktop',
+'nautilus.desktop',
+'com.visualstudio.code.desktop', 
+'org.telegram.desktop.desktop', 
+'com.discordapp.Discord.desktop',
+'com.spotify.Client.desktop',
+'org.onlyoffice.desktopeditors.desktop', 
+'com.github.Eloston.UngoogledChromium.desktop',
+'libreoffice-writer.desktop'
+]"
