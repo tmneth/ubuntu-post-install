@@ -141,3 +141,7 @@ options=(
 				
 	esac
 done
+
+# Setting up desktop wallpaper
+URI="Downloads/Ubuntu-post-install-main/wallpaper.jpeg"
+gsettings set org.gnome.desktop.background picture-uri "${URI}"
