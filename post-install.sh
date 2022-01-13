@@ -81,6 +81,7 @@ cmd=(dialog --separate-output --checklist "Please Select Optional Software you w
 options=(
 	 1 "Spotify" off
 	 2 "Steam" off  
+	 3 "CLion" off 
    	 4 "PyCharm (community)" off
 	 5 "PyCharm (professional)" off
 	 6 "PhpStorm" off
