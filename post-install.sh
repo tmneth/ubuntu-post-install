@@ -168,7 +168,7 @@ done
 
 # Setting up desktop wallpaper
 wget https://raw.githubusercontent.com/tmneth/ubuntu-post-install/main/wallpaper.jpeg
-URI="Downloads/Ubuntu-post-install-main/wallpaper.jpeg"
+URI="Downloads/ubuntu-post-install-main/wallpaper.jpeg"
 gsettings set org.gnome.desktop.background picture-uri "${URI}"
 
 
