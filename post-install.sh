@@ -17,6 +17,12 @@ sudo apt purge gnome-mahjongg -y
 sudo apt purge gnome-mines -y
 sudo apt purge gnome-sudoku -y
 sudo apt purge rhytmbox*
+
+# System Clean Up
+sudo apt install -f
+sudo apt autoremove -y
+sudo apt autoclean
+sudo apt clean
 }
 
 clear
