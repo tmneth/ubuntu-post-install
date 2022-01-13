@@ -105,6 +105,7 @@ options=(
 	 14 "Microsoft Teams" off
 	 15 "Skype" off
 	 16 "Brave" off
+	 17 "Anki" off
 	 )
 	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -194,6 +195,11 @@ options=(
 				echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 				sudo apt update -y
 				sudo apt install brave-browser -y
+				;;
+			17)
+				#Anki
+				echo "Installing Anki"
+				flatpak install flathub net.ankiweb.Anki
 				;;
 				
 	esac
