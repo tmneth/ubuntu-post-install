@@ -199,3 +199,4 @@ gsettings set org.gnome.shell favorite-apps "[
 'org.gnome.Screenshot.desktop'
 ]"
 
+sudo reboot
