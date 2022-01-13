@@ -94,6 +94,7 @@ options=(
 	 13 "Signal" off
 	 14 "Microsoft Teams" off
 	 15 "Skype" off
+	 16 "Brave" off
 	 )
 	 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -175,6 +176,14 @@ options=(
 				#Install Skype
 				echo "Installing Skype"
 				flatpak install flathub com.skype.Client -y
+				;;
+			16)
+				#Install Brave
+				echo "Installing Brave"
+				sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg -y
+				echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+				sudo apt update -y
+				sudo apt install brave-browser -y
 				;;
 				
 	esac
