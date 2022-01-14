@@ -9,14 +9,6 @@ sudo apt install flatpak -y
 flatpak update -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-read -r -p "Have you chosen normal Ubuntu installation mode? [Y/N] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
-then
-   normal_install
-else
-    continue
-fi
-
 # VS Code
 echo "Installing Visual Studio Code"
 flatpak install flathub com.visualstudio.code -y
