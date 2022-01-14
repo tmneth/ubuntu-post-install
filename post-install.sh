@@ -65,6 +65,11 @@ sudo apt install gh
 # Neofetch
 sudo apt install neofetch -y
 
+# ZSH
+sudo apt install zsh -y
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 sudo apt install dialog
 cmd=(dialog --separate-output --checklist "Please Select Optional Software you want to install:" 114 137 218)
 options=(
