@@ -11,7 +11,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # VS Code
 echo "Installing Visual Studio Code"
-flatpak install flathub com.visualstudio.code -y
+sudo snap install --classic code -y
 
 # Install VS Code extensions
 code --install-extension GitHub.vscode-pull-request-github
@@ -55,7 +55,7 @@ flatpak install flathub  org.gimp.GIMP -y
 echo "Installing OBS"
 flatpak install flathub  com.obsproject.Studio -y
 
-sudo apt install curl
+sudo apt install curl -y
 # Installing gh
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
@@ -182,7 +182,7 @@ options=(
 				;;
 			17)
 				# Anki
-				echo "Installing Anki"
+				echo "Installing Anki" -y
 				flatpak install flathub net.ankiweb.Anki
 				;;
 				
@@ -197,10 +197,10 @@ gsettings set org.gnome.desktop.background picture-uri "${URI}"
 
 # Setting up favourite-apps
 gsettings set org.gnome.shell favorite-apps "[
-'firefox_firefox.desktop', 
+'firefox.desktop', 
 'org.gnome.Terminal.desktop',
 'nautilus.desktop',
-'com.visualstudio.code.desktop', 
+'code_code.desktop', 
 'org.telegram.desktop.desktop', 
 'com.discordapp.Discord.desktop',
 'org.onlyoffice.desktopeditors.desktop', 
