@@ -39,6 +39,12 @@ fi
 echo "Installing Visual Studio Code"
 flatpak install flathub com.visualstudio.code -y
 
+# Install VS Code extensions
+code --install-extension GitHub.vscode-pull-request-github
+code --install-extension esbenp.prettier-vscode
+code --install-extension jonkwheeler.styled-components-snippets
+code --install-extension dsznajder.es7-react-js-snippets
+
 # Node.js
 echo "Installing Node.js"
 sudo apt install nodejs -y
