@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 
 # Update and Upgrade
 echo "Updating and Upgrading"
@@ -35,56 +35,55 @@ else
     continue
 fi
 
-#VS Code
+# VS Code
 echo "Installing Visual Studio Code"
 flatpak install flathub com.visualstudio.code -y
 
-#Node.js
+# Node.js
 echo "Installing Node.js"
 sudo apt install nodejs -y
 
-#NPM
+# NPM
 echo "Installing Npm"
 sudo apt install npm -y
 
-#GIT
+# GIT
 echo "Installing Git"
 sudo apt install git -y
 
-#Chromium
+# Chromium
 echo "Installing Chromium"
 flatpak install flathub com.github.Eloston.UngoogledChromium -y
 
-#Discord
+# Discord
 echo "Installing Discord"
 flatpak install flathub com.discordapp.Discord -y
 
-#Telegram
+# Telegram
 echo "Installing Telegram"
 flatpak install flathub org.telegram.desktop -y
 
-#OnlyOffice
+# OnlyOffice
 echo "Installing OnlyOffice"
 flatpak install flathub  org.onlyoffice.desktopeditors -y
 
-#GIMP
+# GIMP
 echo "Installing GIMP"
 flatpak install flathub  org.gimp.GIMP -y
 
-#OBS
+# OBS
 echo "Installing OBS"
 flatpak install flathub  com.obsproject.Studio -y
 
 sudo apt install curl
-#Installing gh
+# Installing gh
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
 sudo apt install gh
 
-#Neofetch
+# Neofetch
 sudo apt install neofetch -y
-
 
 sudo apt install dialog
 cmd=(dialog --separate-output --checklist "Please Select Optional Software you want to install:" 114 137 218)
@@ -113,83 +112,83 @@ options=(
 		do
 		    case $choice in
 			1)
-	     			#Install Spotify
+	     			# Install Spotify
 				echo "Installing Spotiy"
 				flatpak install flathub com.spotify.Client -y
 				;;
 	        	
 	   		2)
-	     			#Install Steam
+	     			# Install Steam
 				echo "Installing Steam"
 				flatpak install flathub com.valvesoftware.Steam -y
 				;;
 			3)
-			    	#Install CLion
+			    	# Install CLion
 			    	echo "Installing CLion"
 				flatpak install flathub com.jetbrains.CLion -y
 				;;
     			4)	
-				#Install PyCharm (community)
+				# Install PyCharm (community)
 				echo "Installing PyCharm (community)"
 				flatpak install flathub com.jetbrains.PyCharm-Community -y
 				;;
     			5)	
-				#Install PyCharm (professional)
+				# Install PyCharm (professional)
 				echo "Installing PyCharm (professional)"
 				flatpak install flathub com.jetbrains.PyCharm-Professional -y
 				;;
     			6)	
-				#Install PhpStorm
+				# Install PhpStorm
 				echo "Installing PhpStorm"
 				flatpak install flathub com.jetbrains.PhpStorm -y
 				;;
  		    	7)	
-				#Install WebStorm
+				# Install WebStorm
 				echo "Installing WebStorm"
 				flatpak install flathub com.jetbrains.WebStorm -y
 				;;
 			8)	
-				#Install GitKraken
+				# Install GitKraken
 				echo "Installing GitKraken"
 				flatpak install flathub com.axosoft.GitKraken -y
 				;;	
  			9)
-				#Install Gitg
+				# Install Gitg
 				echo "Installing Gitg"
 				flatpak install flathub org.gnome.gitg -y
 				;;
 		 	10)
-				#Install Postman
+				# Install Postman
 				echo "Installing Gitg"
 				flatpak install flathub com.getpostman.Postman -y
 				;;
 			11)
-				#Install KeePassXC
+				# Install KeePassXC
 				echo "Installing KeePassXC"
 				flatpak install flathub org.keepassxc.KeePassXC -y
 				;;
 			12)
-				#Install Bitwarden
+				# Install Bitwarden
 				echo "Installing Bitwarden"
 				flatpak install flathub com.bitwarden.desktop -y
 				;;
 			13)
-				#Install Signal
+				# Install Signal
 				echo "Installing Signal"
 				flatpak install flathub org.signal.Signal -y
 				;;
 			14)
-				#Install Microsoft Teams
+				# Install Microsoft Teams
 				echo "Installing Microsoft Teams"
 				flatpak install flathub com.microsoft.Teams -y
 				;;
 			15)
-				#Install Skype
+				# Install Skype
 				echo "Installing Skype"
 				flatpak install flathub com.skype.Client -y
 				;;
 			16)
-				#Install Brave
+				# Install Brave
 				echo "Installing Brave"
 				sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg -y
 				echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -197,7 +196,7 @@ options=(
 				sudo apt install brave-browser -y
 				;;
 			17)
-				#Anki
+				# Anki
 				echo "Installing Anki"
 				flatpak install flathub net.ankiweb.Anki
 				;;
