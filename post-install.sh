@@ -9,24 +9,6 @@ sudo apt install flatpak -y
 flatpak update -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-function normal_install() 
-{
-# Uninstall Default Ubuntu Apps
-sudo apt purge aisleriot -y
-sudo apt purge gnome-mahjongg -y
-sudo apt purge gnome-mines -y
-sudo apt purge gnome-sudoku -y
-sudo apt purge rhytmbox*
-
-# System Clean Up
-sudo apt install -f
-sudo apt autoremove -y
-sudo apt autoclean
-sudo apt clean
-}
-
-clear
-
 read -r -p "Have you chosen normal Ubuntu installation mode? [Y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
