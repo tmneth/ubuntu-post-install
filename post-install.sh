@@ -1,8 +1,12 @@
 # !/bin/bash
 
 # Update and Upgrade
+function update_upgrade() {
 echo "Updating and Upgrading"
 sudo apt update && sudo apt upgrade -y
+}
+
+update_upgrade
 
 echo "Installing Flatpak"
 sudo apt install flatpak -y
@@ -208,5 +212,7 @@ gsettings set org.gnome.shell favorite-apps "[
 'libreoffice-writer.desktop',
 'org.gnome.Screenshot.desktop'
 ]"
+
+update_upgrade
 
 sudo reboot
