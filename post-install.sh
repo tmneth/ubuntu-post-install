@@ -31,6 +31,8 @@ sed -i '/ "workbench.colorTheme": "Atom One Dark"/a "editor.fontFamily": "Fira C
 
 # Node.js
 echo "Installing Node.js"
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
 
 # NPM
