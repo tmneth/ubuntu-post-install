@@ -22,6 +22,11 @@ code --install-extension GitHub.vscode-pull-request-github
 code --install-extension esbenp.prettier-vscode
 code --install-extension jonkwheeler.styled-components-snippets
 code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension akamud.vscode-theme-onedark
+code --install-extension WallabyJs.quokka-vscode
+
+# Fonts for VS Code
+sudo apt install fonts-firacode
 
 # Node.js
 echo "Installing Node.js"
