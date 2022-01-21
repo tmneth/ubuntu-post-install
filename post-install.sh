@@ -27,6 +27,7 @@ code --install-extension WallabyJs.quokka-vscode
 
 # Fonts for VS Code
 sudo apt install fonts-firacode
+sed -i '/ "workbench.colorTheme": "Atom One Dark"/a "editor.fontFamily": "Fira Code",  "editor.fontLigatures": true, "editor.minimap.enabled": false,' ~/.config/Code/User/settings.json
 
 # Node.js
 echo "Installing Node.js"
