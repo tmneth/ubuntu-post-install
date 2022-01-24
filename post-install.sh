@@ -82,6 +82,16 @@ sudo apt install zsh -y
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+# Install syntax highliting & autosuggestions for zsh
+sudo apt install zsh zsh-syntax-highlighting -y
+sudo apt install zsh-autosuggestions -y
+
+# Add plugins to .zshrc
+cp ~/.zshrc ~/.zshrcbackup
+echo "source $(dpkg -L zsh-autosuggestions | grep 'zsh$')" | tee -a ~/.zshrc
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" | tee -a ~/.zshrc
+
+
 sudo apt install dialog
 cmd=(dialog --separate-output --checklist "Please Select Optional Software you want to install:" 114 137 218)
 options=(
