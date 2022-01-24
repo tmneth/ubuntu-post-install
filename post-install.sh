@@ -15,7 +15,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # VS Code
 echo "Installing Visual Studio Code"
-sudo snap install --classic code -y
+sudo snap install --classic code
 
 # Install VS Code extensions
 code --install-extension GitHub.vscode-pull-request-github
